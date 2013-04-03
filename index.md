@@ -239,9 +239,14 @@ library(slidify)
 author("Rmd-intro")
 ## Edit the text
 slidify("index.Rmd")
-## Created the GitHub repo 'Rmd-intro' Initialized my git repository
-## locally Added the github repo as a remote These steps are described
-## here https://github.com/ramnathv/slidify/issues/99
+## Created the GitHub repo 'Rmd-intro'
+
+## Initialized my git repository locally
+
+## Added the github repo as a remote
+
+## These steps are described here
+## https://github.com/ramnathv/slidify/issues/99
 publish("lcolladotor", "Rmd-intro")
 ```
 
