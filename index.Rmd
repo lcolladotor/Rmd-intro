@@ -2,7 +2,7 @@
 title       : Introduction to knitr
 subtitle    : Focus on the R Markdown (Rmd) format
 author      : L. Collado Torres
-job         : http://www.biostat.jhsph.edu/~lcollado
+job         : http://lcolladotor.github.com/Rmd-intro/
 framework   : io2012     # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 #theme : neon
@@ -18,9 +18,9 @@ mode        : selfcontained # {standalone, draft}
 
 - R markdown
 
-* Usign knitr via Rmd
+- Usign knitr via Rmd
 
-* Rnw knitr style
+- Rnw knitr style
 
 --- #knitrIntro
 
@@ -95,6 +95,8 @@ More at the [knitr showcase](http://yihui.name/knitr/demo/showcase/)
 The only major change in Rmd are the R code chunks
 
 RStudio (desktop) has a great syntax description. They have another great page online. [Check it out!](http://www.rstudio.com/ide/docs/r_markdown)
+
+This [blog post](http://jeromyanglim.blogspot.com.au/2012/05/getting-started-with-r-markdown-knitr.html) goes over the basics pretty well.
 
 
 --- #basics
@@ -182,13 +184,42 @@ x <- rnorm(100)
 hist(x, col="light blue", freq=FALSE)
 ```
 
---- #Rcode
+--- #workStyle
 
-## 
+## So, when do I mostly use Rmd?
+
+For EDA
+
+* [fellgernon.tumblr.com example](https://github.com/lcolladotor/lcollado753/blob/master/hw/data-analysis-02/EDA/fell/fell_EDA.html) which you can [view here](http://htmlpreview.github.com/?https://github.com/lcolladotor/lcollado753/blob/master/hw/data-analysis-02/EDA/fell/fell_EDA.html)
+
+For sharing quick code
+
+* [ORFs example](http://rpubs.com/lcollado/3919) visible through RPubs
+* [Scrapping Ravens data from ESPN example](http://rpubs.com/lcollado/4080)
+
+For quick presentations: no LaTeX 
+
+## It's almost like native R files!
+
+--- #weaving
+
+## What about Rnw?
+
+* Change the setting in RStudio to _weave_ with knitr
+	* Preferences, Sweave, Weave Rnw files using knitr
+* Use knitr options instead of the Sweave options
+	* `Sexpr()` works for in-line code
+* Enjoy our `PDF` output!
+
+# Quick example through RStudio
+# Longer template 
+* [Rnw](https://github.com/lcolladotor/lcollado753/blob/master/template_short_commented_knitr.Rnw)
+* [PDF](https://github.com/lcolladotor/lcollado753/blob/master/template_short_commented_knitr.pdf)
 
 
 
---- #presentation
+
+--- &foot #presentation
 
 ## Commands to make the presentation
 
@@ -197,8 +228,13 @@ library(slidify)
 author("Rmd-intro")
 ## Edit the text
 slidify("index.Rmd")
+## Created the GitHub repo 'Rmd-intro'
+## Initialized my git repository locally
+## Added the github repo as a remote 
+## These steps are described here https://github.com/ramnathv/slidify/issues/99
 publish("lcolladotor", "Rmd-intro")
 ```
 
+## Thanks!
 
 

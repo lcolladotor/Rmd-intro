@@ -33,7 +33,7 @@
       <hgroup class="auto-fadein">
         <h1>Introduction to knitr</h1>
         <h2>Focus on the R Markdown (Rmd) format</h2>
-        <p>L. Collado Torres<br/>http://www.biostat.jhsph.edu/~lcollado</p>
+        <p>L. Collado Torres<br/>http://lcolladotor.github.com/Rmd-intro/</p>
       </hgroup>
           </slide>
 
@@ -179,6 +179,8 @@
 
 <p>RStudio (desktop) has a great syntax description. They have another great page online. <a href="http://www.rstudio.com/ide/docs/r_markdown">Check it out!</a></p>
 
+<p>This <a href="http://jeromyanglim.blogspot.com.au/2012/05/getting-started-with-r-markdown-knitr.html">blog post</a> goes over the basics pretty well.</p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -305,29 +307,84 @@ hist(x, col = &quot;light blue&quot;, freq = FALSE)
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="class" id="Rcode" style="background:;">
+      <slide class="" id="workStyle" style="background:;">
   <hgroup>
-    <h2>R code</h2>
+    <h2>So, when do I mostly use Rmd?</h2>
   </hgroup>
   <article>
-    <pre><code class="r">plot(1:10)
-</code></pre>
+    <p>For EDA</p>
 
-<p><img src="figure/plot.png" alt="plot of chunk plot"> </p>
+<ul>
+<li><a href="https://github.com/lcolladotor/lcollado753/blob/master/hw/data-analysis-02/EDA/fell/fell_EDA.html">fellgernon.tumblr.com example</a> which you can <a href="http://htmlpreview.github.com/?https://github.com/lcolladotor/lcollado753/blob/master/hw/data-analysis-02/EDA/fell/fell_EDA.html">view here</a></li>
+</ul>
+
+<p>For sharing quick code</p>
+
+<ul>
+<li><a href="http://rpubs.com/lcollado/3919">ORFs example</a> visible through RPubs</li>
+<li><a href="http://rpubs.com/lcollado/4080">Scrapping Ravens data from ESPN example</a></li>
+</ul>
+
+<p>For quick presentations: no LaTeX </p>
+
+<h2>It&#39;s almost like native R files!</h2>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="Test" style="background:;">
+      <slide class="" id="weaving" style="background:;">
   <hgroup>
-    
+    <h2>What about Rnw?</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>Change the setting in RStudio to <em>weave</em> with knitr
+
+<ul>
+<li>Preferences, Sweave, Weave Rnw files using knitr</li>
+</ul></li>
+<li>Use knitr options instead of the Sweave options
+
+<ul>
+<li><code>Sexpr()</code> works for in-line code</li>
+</ul></li>
+<li>Enjoy our <code>PDF</code> output!</li>
+</ul>
+
+<h1>Quick example through RStudio</h1>
+
+<h1>Longer template</h1>
+
+<ul>
+<li><a href="https://github.com/lcolladotor/lcollado753/blob/master/template_short_commented_knitr.Rnw">Rnw</a></li>
+<li><a href="https://github.com/lcolladotor/lcollado753/blob/master/template_short_commented_knitr.pdf">PDF</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="presentation" style="background:;">
+  <hgroup>
+    <h2>Commands to make the presentation</h2>
   </hgroup>
   <article>
     <pre><code class="r">library(slidify)
 author(&quot;Rmd-intro&quot;)
+## Edit the text
+slidify(&quot;index.Rmd&quot;)
+## Created the GitHub repo &#39;Rmd-intro&#39; Initialized my git repository
+## locally Added the github repo as a remote These steps are described
+## here https://github.com/ramnathv/slidify/issues/99
+publish(&quot;lcolladotor&quot;, &quot;Rmd-intro&quot;)
 </code></pre>
 
+<h2>Thanks!</h2>
+
+<footer class = 'logo'>
+	<a href="http://www.biostat.jhsph.edu/~lcollado">L. Collado-Torres</a>
+</footer>
   </article>
   <!-- Presenter Notes -->
 </slide>
