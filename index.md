@@ -1,7 +1,7 @@
 ---
 title       : Introduction to knitr
-subtitle    : Focus on the R Markdown (Rmd) format
-author      : L. Collado Torres
+subtitle    : The R Markdown (Rmd) format
+author      : L. Collado Torres for JHSPH Biostat computing club
 job         : http://lcolladotor.github.com/Rmd-intro/
 framework   : io2012     # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
@@ -39,7 +39,7 @@ It's a framework for producing reproducible reports
 * _Prettier_ out of the box
 	* Code re-formating: tidy
 	* Code highlighting
-	* Simple copy-paste
+	* Simple copy-paste enabled
 * Better approach to dealing with plots
 * Under active development by [@xieyihui](https://twitter.com/xieyihui)
 
@@ -51,10 +51,10 @@ It's a framework for producing reproducible reports
 
 # Mark-down (`md`) advantages
 * It's simple: little overhead
-* Main result is `HTML` which opens new worlds besides `PDF`
+* Main result is `HTML` which opens new horizons besides `PDF`
 
 # knitr main outputs
-* `PDF`: still through `Rnw` files
+* `PDF`: _mostly_ through `Rnw` files
 * `HTML`: via R Markdown files (`Rmd`)
 	* Reports
 	* Tutorials: [ggplot2 intro](http://www.ling.upenn.edu/~joseff/avml2012/)
@@ -79,7 +79,6 @@ More at the [knitr showcase](http://yihui.name/knitr/demo/showcase/)
 * Everything works out of the box
 * You can use `knitr` instead of `Sweave()` (change the option)
 * Easily publish your reports via [RPubs](http://rpubs.com/)
-	* [my RPubs](http://rpubs.com/lcollado/)
 
 # Blogging
 * `knit2wp()` introduced [here](http://yihui.name/en/2013/02/publishing-from-r-knitr-to-wordpress/)
@@ -90,7 +89,8 @@ More at the [knitr showcase](http://yihui.name/knitr/demo/showcase/)
 
 ## R Markdown
 
-[Markdowns syntax](http://daringfireball.net/projects/markdown/syntax) is simple
+[Markdown's syntax](http://daringfireball.net/projects/markdown/syntax) is simple
+* That's also partly why LaTeX (Rnw) is still superior for PDF output if you want more control.
 
 The only major change in Rmd are the R code chunks
 
@@ -112,7 +112,7 @@ This [blog post](http://jeromyanglim.blogspot.com.au/2012/05/getting-started-wit
 
 1. In RStudio: File, New, R Markdown
 2. Click on `MD` (Markdown quick reference)
-3. Edit the title, text, code
+3. Edit the title, text, code, add chunks as you wish
 4. Click on `Knit HTML`
 
 
@@ -209,6 +209,8 @@ For sharing quick code
 
 For quick presentations: no LaTeX 
 
+For blogging
+
 ## It's almost like native R files!
 
 --- #weaving
@@ -219,10 +221,12 @@ For quick presentations: no LaTeX
 	* Preferences, Sweave, Weave Rnw files using knitr
 * Use knitr options instead of the Sweave options
 	* `Sexpr()` works for in-line code
-* Enjoy our `PDF` output!
+* Enjoy your `PDF` output!
 
-# Quick example through RStudio
-# Longer template 
+Quick example through RStudio
+
+
+Longer template 
 * [Rnw](https://github.com/lcolladotor/lcollado753/blob/master/template_short_commented_knitr.Rnw)
 * [PDF](https://github.com/lcolladotor/lcollado753/blob/master/template_short_commented_knitr.pdf)
 
@@ -248,6 +252,7 @@ slidify("index.Rmd")
 ## These steps are described here
 ## https://github.com/ramnathv/slidify/issues/99
 publish("lcolladotor", "Rmd-intro")
+## Slides are live at http://lcolladotor.github.com/Rmd-intro/
 ```
 
 
