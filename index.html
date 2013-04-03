@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Introduction to knitr</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Introduction to knitr">
+  <meta name="author" content="L. Collado Torres">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+    
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+    <!-- END LOGO SLIDE -->
+    
+
+    <!-- TITLE SLIDE -->
+    <!-- Should I move this to a Local Layout File? -->
+    <slide class="title-slide segue nobackground">
+      <hgroup class="auto-fadein">
+        <h1>Introduction to knitr</h1>
+        <h2>Focus on the R Markdown (Rmd) format</h2>
+        <p>L. Collado Torres<br/>http://www.biostat.jhsph.edu/~lcollado</p>
+      </hgroup>
+          </slide>
+
+    <!-- SLIDES -->
+      <slide class="" id="overview" style="background:black;">
+  <hgroup>
+    <h2>Overview</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li><p>knitr</p></li>
+<li><p>R markdown</p></li>
+<li><p>Usign knitr via Rmd</p></li>
+<li><p>Rnw knitr style</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="knitrIntro" style="background:;">
+  <hgroup>
+    <h2>knitr</h2>
+  </hgroup>
+  <article>
+    <p>It&#39;s a framework for producing reproducible reports</p>
+
+<ul>
+<li>Code and text</li>
+<li>Runs R code and includes the output</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="vsSweave" style="background:;">
+  <hgroup>
+    <h2>How is it better than <code>Sweave()</code>?</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li><em>Prettier</em> out of the box
+
+<ul>
+<li>Code re-formating: tidy</li>
+<li>Code highlighting</li>
+<li>Simple copy-paste</li>
+</ul></li>
+<li>Better approach to dealing with plots</li>
+<li>Under active development by <a href="https://twitter.com/xieyihui">@xieyihui</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="keyDiff" style="background:;">
+  <hgroup>
+    <h2>The main difference: Markdown</h2>
+  </hgroup>
+  <article>
+    <h1>Mark-down (<code>md</code>) advantages</h1>
+
+<ul>
+<li>It&#39;s simple: little overhead</li>
+<li>Main result is <code>HTML</code> which opens new worlds besides <code>PDF</code></li>
+</ul>
+
+<h1>knitr main outputs</h1>
+
+<ul>
+<li><code>PDF</code>: still through <code>Rnw</code> files</li>
+<li><code>HTML</code>: via R Markdown files (<code>Rmd</code>)
+
+<ul>
+<li>Reports</li>
+<li>Tutorials: <a href="http://www.ling.upenn.edu/%7Ejoseff/avml2012/">ggplot2 intro</a></li>
+<li>Presentations:
+
+<ul>
+<li><a href="http://rpubs.com/JoFrhwld/UseR_Sept">RPubs example</a></li>
+<li>My first <a href="http://fellgernon.tumblr.com/post/35587597245/introduction-to-r-and-biostatistics-2012-version#.UVuFAavF0b0">Rmd presentation</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>More at the <a href="http://yihui.name/knitr/demo/showcase/">knitr showcase</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="community" style="background:;">
+  <hgroup>
+    <h2>Active development around knitr</h2>
+  </hgroup>
+  <article>
+    <h1><a href="http://slidify.org/">slidify</a></h1>
+
+<ul>
+<li>How this presentation was made and published on the web.</li>
+</ul>
+
+<h1><a href="https://github.com/cboettig/knitcitations">knitcitations</a></h1>
+
+<ul>
+<li>Useful for creating <code>HTML</code> citations: <a href="http://fellgernon.tumblr.com/post/46483321621/great-commentary-on-sequestrations-impact-on-research#.UVuvz6vF0b0">example</a></li>
+</ul>
+
+<h1><a href="http://www.rstudio.com/">RStudio</a></h1>
+
+<ul>
+<li>Everything works out of the box</li>
+<li>You can use <code>knitr</code> instead of <code>Sweave()</code> (change the option)</li>
+<li>Easily publish your reports via <a href="http://rpubs.com/">RPubs</a>
+
+<ul>
+<li><a href="http://rpubs.com/lcollado/">my RPubs</a></li>
+</ul></li>
+</ul>
+
+<h1>Blogging</h1>
+
+<ul>
+<li><code>knit2wp()</code> introduced <a href="http://yihui.name/en/2013/02/publishing-from-r-knitr-to-wordpress/">here</a></li>
+<li>through Jekyll: check <a href="http://jfisher-usgs.github.com/r/2012/07/03/knitr-jekyll/">this</a></li>
+<li>doable at Tumblr: Jeffrey Horner <a href="http://jeffreyhorner.tumblr.com/post/25804518110/blog-with-r-markdown-and-tumblr-part-i">part I</a>, <a href="http://jeffreyhorner.tumblr.com/post/25943954723/blog-with-r-markdown-and-tumblr-part-ii">part II</a>, <a href="http://jeffreyhorner.tumblr.com/post/26164742243/wrap-up-on-blogging-with-r-markdown-and-tumblr">wrap-up</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="rMark" style="background:;">
+  <hgroup>
+    <h2>R Markdown</h2>
+  </hgroup>
+  <article>
+    <p><a href="http://daringfireball.net/projects/markdown/syntax">Markdowns syntax</a> is simple</p>
+
+<p>The only major change in Rmd are the R code chunks</p>
+
+<p>RStudio (desktop) has a great syntax description. They have another great page online. <a href="http://www.rstudio.com/ide/docs/r_markdown">Check it out!</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="basics" style="background:;">
+  <hgroup>
+    <h2>Rmd basics</h2>
+  </hgroup>
+  <article>
+    <h1>Your first Rmd file</h1>
+
+<ol>
+<li>In RStudio: File, New, R Markdown</li>
+<li>Click on <code>Knit HTML</code></li>
+</ol>
+
+<h1>Your 2nd file</h1>
+
+<ol>
+<li>In RStudio: File, New, R Markdown</li>
+<li>Click on <code>MD</code> (Markdown quick reference)</li>
+<li>Edit the title, text, code</li>
+<li>Click on <code>Knit HTML</code></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="chunks" style="background:;">
+  <hgroup>
+    <h2>Rmd R chunks</h2>
+  </hgroup>
+  <article>
+    <p>Basic chunk</p>
+
+<p>```r</p>
+
+<p>hola()<br>
+```</p>
+
+<p>You can add chunk labels after r</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="knitrOpt" style="background:;">
+  <hgroup>
+    <h2>Options</h2>
+  </hgroup>
+  <article>
+    <p><a href="http://yihui.name/knitr/options">http://yihui.name/knitr/options</a></p>
+
+<ul>
+<li>Figure
+
+<ul>
+<li><code>fig.width</code>, <code>fig.height</code>: R control</li>
+<li><code>out.width</code>, <code>out.height</code>: output control</li>
+<li><code>fig.keep</code>: useful for &gt;=2 plots in 1 chunk</li>
+<li><code>fig.cap</code>: caption in Rnw only<br></li>
+</ul></li>
+<li>Cache
+
+<ul>
+<li><code>cache</code>: whether to cache a chunk</li>
+<li><code>dependson</code>: which other chunks this chunk depends on</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="opt2" style="background:;">
+  <hgroup>
+    <h2>Options continued</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>Results
+
+<ul>
+<li><code>results</code>: similar to the same option in <code>Sweave()</code></li>
+<li><code>message</code>, <code>error</code>, <code>warning</code>: whether to print them or not</li>
+</ul></li>
+<li>Global options</li>
+</ul>
+
+<pre><code class="r">opts_chunk$set(fig.width = 5, fig.height = 5, cache = TRUE)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>fig.height example</h2>
+  </hgroup>
+  <article>
+      
+<div class='left' style='float:left;width:50%'>
+ <pre><code class="r">set.seed(20130404)
+x &lt;- rnorm(100)
+hist(x, col = &quot;light blue&quot;, freq = FALSE)
+</code></pre>
+
+<p><img src="figure/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+
+</div>    
+<div class='right' style='float:right;width:50%'>
+ <pre><code class="r">set.seed(20130404)
+x &lt;- rnorm(100)
+hist(x, col = &quot;light blue&quot;, freq = FALSE)
+</code></pre>
+
+<p><img src="figure/unnamed-chunk-2.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="class" id="Rcode" style="background:;">
+  <hgroup>
+    <h2>R code</h2>
+  </hgroup>
+  <article>
+    <pre><code class="r">plot(1:10)
+</code></pre>
+
+<p><img src="figure/plot.png" alt="plot of chunk plot"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="Test" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article>
+    <pre><code class="r">library(slidify)
+author(&quot;Rmd-intro&quot;)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+
+  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+<!-- Grab CDN jQuery, fall back to local if offline -->
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+<script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery-1.7.min.js"><\/script>')</script>
+<!-- Load Javascripts for Widgets -->
+<!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+</html>
