@@ -1,0 +1,33 @@
+\documentclass{article}
+
+\begin{document}
+
+<<>>=
+x <- "hola"
+@
+
+
+<<plotComp, fig.cap=x>>=
+plot(1:10)
+@
+
+<<eval=FALSE>>=
+y <- rnorm(100)
+@
+
+<<echo=FALSE>>=
+z <- rnorm(10)
+@
+
+<<results='asis'>>=
+library(xtable)
+data <- data.frame(x=1:10, y=rnorm(10))
+fit <- lm(y ~x, data=data)
+print(xtable(summary(fit)))
+@
+
+
+
+
+
+\end{document}
