@@ -1,3 +1,7 @@
+=======
+Rmd-intro
+=========
+
 # Raw files for my Rmd-intro presentation http://lcolladotor.github.com/Rmd-intro/
 
 ## intro.Rmd
@@ -20,3 +24,4 @@ This is the quick Rnw example I showed in the presentation where you can generat
 ## slidify-example.R
 
 This is the short example I showed at the end of the presentation.
+
